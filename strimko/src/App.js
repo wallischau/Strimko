@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
 // import './App.css';
-import Header from "./components/Header";
-import Playmat from "./components/Playmat";
+import { BrowserRouter as Router, Route, Link, IndexRoute, hashHistory, browserHistory, Switch} from 'react-router-dom';
+import Puzzles from "./components/Puzzles";
+import PuzzleDetail from "./components/PuzzleDetail";
+// import Header from "./components/Header";
+// import Playmat from "./components/Playmat";
+// import axios from 'axios';
+import Nav from "./components/Nav";
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <Header />
-          </div> 
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <Playmat/>
-          </div>
-        </div>
+      <Router>
+      <div>
+        <Nav />
+        <Switch>        
+          <Route exact path="/" component={Puzzles} />
+{/*          <Route exact path="/:id" component={PuzzleDetail} /> */}
+        </Switch>
       </div>
+      </Router>
     );
   }
 }

@@ -4,17 +4,24 @@
 
 .number-cell {
 	/*border: 5px solid green;*/
-	margin-bottom: 15px;
+	margin-top: 20px;
+	margin-left: 5px;
 }
 
 .number-panel {
-	border: 5px solid green;
-	border-radius: 5%;
 }
 
-.circle {
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
-	border: 1px solid black;
+.node-entry {
+	height: 48px;
+	width: 48px;
+	font-size: 1.5em;
+}
+
+.mat {
+	height: 380px;
+	width: 380px;
+	position: absolute;
+	top: -25px;
+	left: 0px;
+
 }

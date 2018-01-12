@@ -3,13 +3,45 @@
 //5 sets make a puzzle layout
 //array of 25 number entries follow
 
-var puzzleSet = {
-	stream0: [{0,0}, {0,1}, {0,2}, {0,3} {0,4}],
-	stream1: [{1,0}, {1,1}, {1,2}, {1,3} {1,4}],
-	stream2: [{2,0}, {2,1}, {2,2}, {2,3} {2,4}],
-	stream3: [{3,0}, {3,1}, {3,2}, {3,3} {3,4}],
-	stream4: [{4,0}, {4,1}, {4,2}, {4,3} {4,4}],
-	entries: [
+var puzzle = {
+	puzzleSet: 1,
+	puzzleNum: 100,
+	mat: "playmat_100.jpg",
+	stream0: [{x:0,y:0}, {x:0,y:1}, {x:0,y:2}, {x:0,y:3}, {x:0,y:4}],
+	stream1: [{x:1,y:0}, {x:1,y:1}, {x:1,y:2}, {x:1,y:3}, {x:1,y:4}],
+	stream2: [{x:2,y:0}, {x:2,y:1}, {x:2,y:2}, {x:2,y:3}, {x:2,y:4}],
+	stream3: [{x:3,y:0}, {x:3,y:1}, {x:3,y:2}, {x:3,y:3}, {x:3,y:4}],
+	stream4: [{x:4,y:0}, {x:4,y:1}, {x:4,y:2}, {x:4,y:3}, {x:4,y:4}],
+	initEntries: [
+	null,	null,	2,		null,	null,
+	null,	3,		null,	5,		null,
+	null,	null,	null,	null,	null,
+	null,	1,		null,	4,		null,
+	null,	null,	null,	null,	null],
+	solution: [
+	1,2,3,4,5,
+	2,3,4,5,1,
+	3,4,5,1,2,
+	4,5,1,2,3,
+	5,1,2,3,4]
+}
+
+var puzzle = {
+	puzzleSet: 1,
+	puzzleNum: 101,
+	mat: "playmat_101.jpg",
+	stream0: [{x:0,y:0}, {x:0,y:1}, {x:0,y:2}, {x:0,y:3}, {x:0,y:4}],
+	stream1: [{x:1,y:0}, {x:1,y:1}, {x:1,y:2}, {x:1,y:3}, {x:1,y:4}],
+	stream2: [{x:2,y:0}, {x:2,y:1}, {x:2,y:2}, {x:2,y:3}, {x:2,y:4}],
+	stream3: [{x:3,y:0}, {x:3,y:1}, {x:3,y:2}, {x:3,y:3}, {x:3,y:4}],
+	stream4: [{x:4,y:0}, {x:4,y:1}, {x:4,y:2}, {x:4,y:3}, {x:4,y:4}],
+	initEntries: [
+	null,	3,		null,	null,	null,
+	null,	2,		null,	null,	null,
+	null,	null,	null,	4,		null,
+	null,	null,	null,	5,		null,
+	null,	null,	1,		null,	null],
+	solution: [
 	1,2,3,4,5,
 	2,3,4,5,1,
 	3,4,5,1,2,

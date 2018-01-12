@@ -12,13 +12,18 @@ let PuzzleSchema = new Schema({
 		type: Number,
 		required: true
 	},
+	mat: {
+		type: String,
+		required: true
+	},
 
 	stream0: [coord],
 	stream1: [coord],
 	stream2: [coord],
 	stream3: [coord],
 	stream4: [coord],
-	entries: [Number]
+	initEntries: [Number],
+	solution: [Number]
 });
 
 let Puzzle = mongoose.model('Puzzle', PuzzleSchema);
