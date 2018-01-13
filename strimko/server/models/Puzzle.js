@@ -17,11 +17,6 @@ let PuzzleSchema = new Schema({
 		required: true
 	},
 
-	stream0: [coord],
-	stream1: [coord],
-	stream2: [coord],
-	stream3: [coord],
-	stream4: [coord],
 	initEntries: [Number],
 	solution: [Number]
 });
