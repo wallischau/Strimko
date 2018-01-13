@@ -20,11 +20,13 @@ class Detail extends Component {
        currentPuzzle: initValue,
        currentPuzzleId: props.currentPuzzleId,
        mat: "playmat_noline.jpg",
-       hide: initHideMenu
+       hide: initHideMenu, 
+       result: ""
       };
 
       this.toggleMenu = this.toggleMenu.bind(this);
       this.nodeHandler = this.nodeHandler.bind(this);
+      this.checkResult = this.checkResult.bind(this);
   } //constructor
 
   toggleMenu(position) {
@@ -84,7 +86,24 @@ class Detail extends Component {
     this.setState({
       hide: arr
     });
-}
+  }
+
+  checkResult() {
+    let result; 
+    if (!this.state.currentPuzzleId)
+      return;
+    for (let i=0; i<this.state.currentPuzzle.initEntries.length; i++) {
+      if (this.state.currentPuzzle.initEntries[i] !== this.state.currentPuzzle.solution[i]) {
+        this.setState({ result: "Not correct"});
+        console.log("not correct");
+        return;
+      }
+    }
+    console.log('correct');
+    this.setState({ result: "Great job!"});
+  }
+
+
 
   render() {
     let menu;
@@ -241,6 +260,14 @@ class Detail extends Component {
             <PuzzleNode hide={this.state.hide[24]} action={nodeHandler.bind(this, 24)}></PuzzleNode>
           </div>
         </div>
+      </div>
+      <div>
+        <button className="check-result" onClick={this.checkResult}>
+          Check result
+        </button>
+        <label className="result">
+            {this.state.result}
+        </label>
       </div>
 
     </div>

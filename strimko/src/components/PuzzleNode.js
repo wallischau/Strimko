@@ -45,6 +45,12 @@ const PuzzleNode = (props) => {
 					action(5, e);}
 					 }>5
 				</div>								
+				<div className="numItem" onClick={(e) => {
+					e.stopPropagation();
+				    e.nativeEvent.stopImmediatePropagation();
+					action(null, e);}
+					 }>X
+				</div>								
 			</div>
 		</div>
 		);

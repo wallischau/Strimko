@@ -12,6 +12,7 @@ const Nav = () =>
         <a href="/" className="navbar-brand">
           Logic challenge
         </a>
+        <div className="author">Programmed by Wallis Chau </div>
       </div>
     </div>
   </nav>;
