@@ -1,3 +1,6 @@
+.strimko-title {
+	color: green;
+}
 .number-row {
 	height: 50%;
 }
@@ -9,12 +12,14 @@
 }
 
 .number-panel {
+	z-index: 0;
 }
 
 .node-entry {
 	height: 48px;
 	width: 48px;
 	font-size: 1.5em;
+	z-index: 0;
 }
 
 .mat {
@@ -27,9 +32,12 @@
 }
 
 .numItem {
-
+	z-index: 10;
 }
 
 .pickNumMenu {
 	background: yellow;
+	color: green;
+	position: absolute;
+	z-index: 10;
 }

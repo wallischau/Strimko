@@ -33,7 +33,7 @@ class Detail extends Component {
     console.log('this', this);
     console.log('position', position);
     let arr = this.state.hide.slice();
-    arr[position] = false;
+    arr[position] = arr[position]?false:true;
     this.setState({
       hide: arr
     });
@@ -74,9 +74,10 @@ class Detail extends Component {
 
   handler(position, value, e) {
     e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
     console.log("handler");
     console.log(value);
-    console.log(value);
+    // console.log(e);
     let curPuz = {...this.state.currentPuzzle};
     curPuz.initEntries[position] = value;
     this.setState({curPuz});
