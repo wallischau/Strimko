@@ -15,7 +15,6 @@ class Puzzles extends Component {
     puzzles: [],
     currentPuzzle: null,
     currentPuzzleId: null
-    // num: ""
   };
 
   componentDidMount() {
@@ -71,32 +70,6 @@ class Puzzles extends Component {
             <Jumbotron>
               <Header />
             </Jumbotron>
-{/*            <form> */}
-{/*              <Input */}
-{/*                value={this.state.title} */}
-{/*                onChange={this.handleInputChange} */}
-{/*                name="title" */}
-{/*                placeholder="Title (required)" */}
-{/*              /> */}
-{/*              <Input */}
-{/*                value={this.state.author} */}
-{/*                onChange={this.handleInputChange} */}
-{/*                name="author" */}
-{/*                placeholder="Author (required)" */}
-{/*              /> */}
-{/*              <TextArea */}
-{/*                value={this.state.synopsis} */}
-{/*                onChange={this.handleInputChange} */}
-{/*                name="synopsis" */}
-{/*                placeholder="Synopsis (Optional)" */}
-{/*              /> */}
-{/*              <FormBtn */}
-{/*                disabled={!(this.state.author && this.state.title)} */}
-{/*                onClick={this.handleFormSubmit} */}
-{/*              > */}
-{/*                Submit Book */}
-{/*              </FormBtn> */}
-{/*            </form> */}
           </Col>
         </Row>
         <Row>
